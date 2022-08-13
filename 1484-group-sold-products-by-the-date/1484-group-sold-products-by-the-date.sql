@@ -10,4 +10,4 @@ FROM (
     FROM activities
     )
 GROUP BY sell_date 
-ORDER BY sell_Date;
+ORDER BY sell_date;
