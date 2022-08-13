@@ -9,4 +9,5 @@ FROM (
     SELECT DISTINCT sell_date,product
     FROM activities
     )
-GROUP BY sell_date ORDER BY 1;
+GROUP BY sell_date 
+ORDER BY sell_Date;
