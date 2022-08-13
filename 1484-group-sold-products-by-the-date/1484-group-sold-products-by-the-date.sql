@@ -1,10 +1,12 @@
 /* Write your PL/SQL query statement below */
-select to_char(sell_date,'YYYY-MM-DD') as sell_date
-    ,count(product) as num_sold
-    ,listagg(product,',') within group (order by product) as products
-from (
-    select distinct sell_date,product
-    from activities
+SELECT TO_CHAR(sell_date,'YYYY-MM-DD') 
+AS sell_date,
+    COUNT(product) 
+AS num_sold,
+    LISTAGG(product,',') WITHIN GROUP (ORDER BY product) 
+AS products
+FROM (
+    SELECT DISTINCT sell_date,product
+    FROM activities
     )
-group by sell_date
-order by 1;
+GROUP BY sell_date ORDER BY 1;
