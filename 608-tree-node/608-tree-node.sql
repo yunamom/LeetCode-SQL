@@ -1,4 +1,4 @@
-# Write your MySQL query statement below
+/* Write your PL/SQL query statement below */
 SELECT id,
 CASE
     WHEN p_id IS NULL 
